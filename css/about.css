@@ -1,0 +1,321 @@
+/* css/about.css */
+
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Color Variables */
+:root {
+  --primary-color: #FF6600;
+  --primary-hover: #e65c00;
+  --secondary-color: #333333;
+  --background-color: #ffffff;
+  --light-bg: #f7f7f7;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+  line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+  background-color: var(--background-color);
+  padding: 20px 40px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between image and text */
+}
+
+.logo img {
+  height: 150px; /* Adjust based on your logo size */
+  width: auto;
+}
+
+.logo span {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #FF6600; /* Adjust to match your theme */
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+  padding:20px;
+}
+
+.nav-links li a:hover {
+  color: var(--primary-color);
+}
+
+/* About Section */
+.about-us {
+  padding: 60px 40px;
+  text-align: center;
+  background-color: var(--background-color);
+}
+
+.about-us h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+}
+
+.about-us p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-us h3 {
+  font-size: 1.8em;
+  margin: 20px 0;
+  color: var(--primary-color);
+}
+
+/* Team Section */
+.team {
+  padding: 60px 40px;
+  background-color: var(--light-bg);
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: var(--secondary-color);
+}
+
+.team-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.team-member {
+  background-color: var(--background-color);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.team-member h4 {
+  font-size: 1.4em;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.team-member p {
+  font-size: 0.9em;
+  color: var(--secondary-color);
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 60px 40px;
+  background-color: var(--background-color);
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: var(--secondary-color);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--secondary-color);
+  color: #fff;
+  text-align: center;
+  padding: 20px 40px;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-us h2, .team h2, .gallery h2 {
+    font-size: 2em;
+  }
+  .team-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* Footer Styles */
+footer {
+  background-color: var(--secondary-color); /* or your chosen dark color */
+  color: #fff;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px;
+}
+
+.footer-section h3 {
+  font-size: 1.4em;
+  margin-bottom: 20px;
+  color: var(--primary-color);  /* using the vibrant orange as accent */
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: var(--primary-color);
+}
+
+.footer-section p a {
+  color: #fff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.footer-section p a:hover {
+  color: var(--primary-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  font-size: 0.9em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-section {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.menu-toggle {
+  display: none; /* Hidden by default on desktop */
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show hamburger menu */
+  }
+
+  .nav-links {
+    display: none; /* Hide menu initially */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: white;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.show {
+    display: flex; /* Show when menu is toggled */
+  }
+}

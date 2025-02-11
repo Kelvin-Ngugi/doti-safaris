@@ -1,0 +1,443 @@
+/* css/home.css */
+
+/* Import a modern sans-serif font (Poppins) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Base Styles & Color Palette */
+/* Ensure color contrast meets accessibility standards */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #FF6600;      /* Vibrant Orange - Ensure contrast with background */
+
+  --primary-hover: #e65c00;      /* Darker Orange for hover */
+  --secondary-color: #333333;    /* Dark Grey for text - Good contrast */
+
+  --background-color: #ffffff;   /* White background - Check contrast with text */
+
+  --light-bg: #f7f7f7;           /* Light Grey for section backgrounds */
+  --accent-color: #FFA726;       /* Optional accent (lighter orange) */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+  line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+  background-color: var(--background-color);
+  padding: 20px 40px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between image and text */
+}
+
+.logo img {
+  height: 150px; /* Adjust based on your logo size */
+  width: auto;
+}
+
+.logo span {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #FF6600; /* Adjust to match your theme */
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+  padding:20px;
+}
+
+.nav-links li a:hover {
+  color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+  background: url('/images/hero_bg.jpg') center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+
+  
+  @media screen and (max-width: 768px) {
+    .hero h1 {
+      font-size: 1.8em;
+    }
+  }
+  
+
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3.5em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.hero .btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Featured Destinations Section */
+.featured-destinations {
+  padding: 60px 40px;
+  background-color: var(--background-color);
+}
+
+.featured-destinations h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  color: var(--secondary-color);
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.destination-card {
+  background-color: var(--light-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-5px);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.destination-card h3 {
+  padding: 20px;
+  font-size: 1.8em;
+  color: var(--primary-color);
+}
+
+.destination-card p {
+  padding: 0 20px 20px;
+  font-size: 1em;
+  color: var(--secondary-color);
+}
+
+.destination-card .btn {
+  display: block;
+  margin: 0 20px 20px;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.destination-card .btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Shop Highlights Section */
+.shop-highlights {
+  padding: 60px 40px;
+  background-color: var(--light-bg);
+}
+
+.shop-highlights h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  color: var(--secondary-color);
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.shop-item {
+  background-color: var(--background-color);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.shop-item:hover {
+  transform: translateY(-5px);
+}
+
+.shop-item img {
+  width: 70%;
+  height: 250px;
+  object-fit: contain;
+}
+
+.shop-item h3 {
+  margin: 15px 0;
+  font-size: 1.5em;
+  color: var(--primary-color);
+}
+
+.shop-item p {
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+
+.shop-item .add-to-cart {
+  background-color: var(--primary-color);
+  border: none;
+  padding: 12px;
+  width: 80%;
+  margin: 0 auto 20px;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.shop-item .add-to-cart:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Footer */
+footer {
+  background-color: var(--secondary-color);
+  color: #fff;
+  text-align: center;
+  padding: 20px 40px;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5em;
+  }
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--secondary-color); /* or your chosen dark color */
+  color: #fff;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+
+@media screen and (max-width: 768px) {
+  footer {
+    font-size: 14px;
+  }
+}
+
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px;
+}
+
+.footer-section h3 {
+  font-size: 1.4em;
+  margin-bottom: 20px;
+  color: var(--primary-color);  /* using the vibrant orange as accent */
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: var(--primary-color);
+}
+
+.footer-section p a {
+  color: #fff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.footer-section p a:hover {
+  color: var(--primary-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  font-size: 0.9em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-section {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.menu-toggle {
+  display: none; /* Hidden by default on desktop */
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Show hamburger menu */
+  }
+
+  .nav-links {
+    display: none; /* Hide menu initially */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: white;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.show {
+    display: flex; /* Show when menu is toggled */
+  }
+}
